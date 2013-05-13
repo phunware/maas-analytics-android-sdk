@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PwCore Sample</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_accesskey">abcd12345</string>
+    <string name="app_signaturekey">098765fghjkl</string>
+    <string name="app_encryptionkey">65as6d54f065sd4f0</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="service_local_service_name">Local Service</string>
+    <string name="service_async_service_name">Async Service</string>
+
+</resources>
