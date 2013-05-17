@@ -8,6 +8,10 @@
 # Java class files
 *.class
 
+# Build file
+build.xml
+build_classpaths.xml
+
 # generated files
 bin/
 gen/
@@ -18,5 +22,5 @@ local.properties
 # Eclipse project files
 .classpath
 .project
-/build/jar
+/build
 /doc
