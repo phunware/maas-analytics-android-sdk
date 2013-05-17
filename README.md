@@ -20,10 +20,10 @@ Each MaaS module requires the MaaS Core SDK to run. In order to use any extra mo
 ``` Java
 @Override
 public void onCreate() {
-        super.onCreate();
-              /* Other Code, and install modules here*/
-           PwCoreSession.getInstanace().installModules(PwAlertsModule.class, ...);
-              /* Other code */
+    super.onCreate();
+    /* Other Code, and install modules here*/
+    PwCoreSession.getInstanace().installModules(PwAlertsModule.class, ...);
+    /* Other code */
 }
 ```
 ###Register API Keys
@@ -33,11 +33,11 @@ Register the access, signature, and encryption key in the `Application’s onCre
 ``` Java
 @Override
 public void onCreate() {
-        super.onCreate();
-        PwCoreSession.getInstanace().registerKeys(this,
-                        "<my_accesskey>",
-                        "<my_signaturekey>",
-                        "<my_encryptionkey>");
+    super.onCreate();
+    PwCoreSession.getInstanace().registerKeys(this,
+                "<my_accesskey>",
+                "<my_signaturekey>",
+                "<my_encryptionkey>");
 }
 ```
 ###Activities - Start and Stop Session
@@ -50,10 +50,10 @@ The passed in context can be either the `Application` context or the `Activity` 
 ``` Java
 @Override
 public void onCreate() {
-        super.onCreate();
-              /* Other Code, and install modules here*/
-           PwCoreSession.getInstanace().activityStartSession(this);
-              /* Other code */
+    super.onCreate();
+    /* Other Code, and install modules here*/
+    PwCoreSession.getInstanace().activityStartSession(this);
+    /* Other code */
 }
 ```
 
@@ -65,10 +65,10 @@ The passed in context can be either the `Application` context or the `Activity` 
 ``` Java
 @Override
 public void onStop() {
-        super.onStop();
-              /* Other code */
-           PwCoreSession.getInstanace().activityStopSession(this);
-              /* Other code */
+    super.onStop();
+    /* Other code */
+    PwCoreSession.getInstanace().activityStopSession(this);
+    /* Other code */
 }
 ```
 
