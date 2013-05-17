@@ -21,7 +21,7 @@ Each MaaS module requires the MaaS Core SDK to run. In order to use any extra mo
 @Override
 public void onCreate() {
     super.onCreate();
-    /* Other Code, and install modules here*/
+    /* Other Code */
     PwCoreSession.getInstanace().installModules(PwAlertsModule.class, ...);
     /* Other code */
 }
