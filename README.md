@@ -117,3 +117,10 @@ to be included in the manifest. If it is not included then the data simply will 
 ######** Requires `ACCESS_NETWORK_STATE` Permission
 In order to get the device User Agent the permission for `ACCESS_NETWORK_STATE` needs to be included in the manifest.
 If it is not included then the data simply will not be collected.
+
+##Verify Manifest
+`PwCoreModule` has a convenience method to check if the manifest for the Core SDK is setup properlly. This should only
+be used for development and testing, not in production.
+Call the method with the line `PwCoreModule.validateManifestCoreSetup(context)`. The passed in context should be the
+application context. If there is an error then an `IllegalStateException` will be thrown with an error message on what
+couldn't be found.
