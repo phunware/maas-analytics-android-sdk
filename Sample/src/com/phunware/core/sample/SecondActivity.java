@@ -15,19 +15,16 @@ public class SecondActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
-		// Show the Up button in the action bar.
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			setupActionBar();
-		}
-	}
-
-	@Override
-	protected void onStart() {
-		super.onStart();
+		
 		/*
 		 * Start Core Session
 		 */
 		PwCoreSession.getInstance().activityStartSession(this);
+		
+		// Show the Up button in the action bar.
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			setupActionBar();
+		}
 	}
 	@Override
 	protected void onStop() {

@@ -20,6 +20,12 @@
         
         <!-- Necessary for core to communicate with MaaS server -->
 	    <service android:name="com.phunware.core.internal.CoreService" />
+	    <!-- Necessary to generate a UDID -->
+	    <service android:name="org.openudid.OpenUDID_service">
+			 <intent-filter>
+				<action android:name="org.openudid.GETUDID" />
+			</intent-filter>
+		</service>
         
         <activity
             android:name="com.phunware.core.sample.MainActivity"
