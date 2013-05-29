@@ -46,6 +46,12 @@ public void onCreate() {
                 "<my_encryptionkey>");
 }
 ```
+######Access Key
+This is the key that is unique to each application.
+######Signature Key
+This key is used to sign the header on all network calls to the MaaS server.
+######Encryption Key
+This key is used to help encrypt data going from the the device to the MaaS server.
 ###Activities - Start and Stop Session
 A session is active once it is started and inactive when it has been stopped.
 A session will expire after 20 seconds (aka Expiration Timeout) unless it is started again before then.
