@@ -80,7 +80,7 @@ A session will expire after 20 seconds (aka Expiration Timeout) unless it is sta
 ####Start
 To start the session in an `Activity` get the `PwCoreSession` instance and call `activityStartSession(context)`.
 The passed in context can be either the `Application` context or the `Activity` context; either will suffice. *This
-should be called in the activites `onCreate` method*. This will ensure the session is properly created before fragments
+should be called in the activities `onCreate` method*. This will ensure the session is properly created before fragments
 can be attached to the activity.
 
 ``` Java
