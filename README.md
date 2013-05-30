@@ -7,6 +7,12 @@ ________________
 ##Overview
 The MaaS Core is designed to have as little impact on developers as possible. MaaS Core helps to gather data for analytical purposes and also maintains a session throughout an app. MaaS Core is also a necessary requirement for all other MaaS SDKs.
 The session is used to uniquely identify analytical data. There are only three steps to setup and maintain sessions in any app. Application keys need to be registered, and then sessions can be started and stopped.
+
+###Build requirements
+The miniumum sdk level that MaaS support is version 8.
+_**Android SDK 2.2+ (API level 8) or above
+
+
 ###Session Setup and Usage
 Update Android Manifest
 The MaaS Core relies on a few settings in order to communicate with the MaaS Server. 
@@ -15,6 +21,14 @@ The third helps to uniquely identify the device.
 ``` XML
 <!-- Necessary for core to communicate with MaaS server -->
 <uses-permission android:name="android.permission.INTERNET" />
+
+<!-- Set this permission if you want get detailed analytics -->
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+<!-- Set these following permissions to you want to track location analytics -->    
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 <application>
 	<!-- other definitions -->
