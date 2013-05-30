@@ -38,7 +38,7 @@ Each MaaS module requires the MaaS Core SDK to run. In order to use any extra mo
 public void onCreate() {
     super.onCreate();
     /* Other Code */
-    PwCoreSession.getInstanace().installModules(PwAlertsModule.getInstance(), ...);
+    PwCoreSession.getInstance().installModules(PwAlertsModule.getInstance(), ...);
     /* Other code */
 }
 ```
@@ -88,7 +88,7 @@ can be attached to the activity.
 public void onCreate() {
     super.onCreate();
     /* Other Code */
-    PwCoreSession.getInstanace().activityStartSession(this);
+    PwCoreSession.getInstance().activityStartSession(this);
     /* Other code */
 }
 ```
@@ -103,7 +103,7 @@ The passed in context can be either the `Application` context or the `Activity` 
 public void onStop() {
     super.onStop();
     /* Other code */
-    PwCoreSession.getInstanace().activityStopSession(this);
+    PwCoreSession.getInstance().activityStopSession(this);
     /* Other code */
 }
 ```
