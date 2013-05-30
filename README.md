@@ -9,15 +9,25 @@ The MaaS Core is designed to have as little impact on developers as possible. Ma
 The session is used to uniquely identify analytical data. There are only three steps to setup and maintain sessions in any app. Application keys need to be registered, and then sessions can be started and stopped.
 ###Session Setup and Usage
 Update Android Manifest
-The MaaS Core relies on a few settings in order to communicate with the MaaS Server. The first is the internet permission, the second is a service that runs network communication asynchronously.
+The MaaS Core relies on a few settings in order to communicate with the MaaS Server. 
+The first is the internet permission, the second is a service that runs network communication asynchronously.
+The third helps to uniquely identify the device.
 ``` XML
 <!-- Necessary for core to communicate with MaaS server -->
 <uses-permission android:name="android.permission.INTERNET" />
 
 <application>
 	<!-- other definitions -->
-    <!-- Necessary for core to communicate with MaaS server -->
-    <service android:name="com.phunware.core.internal.CoreService" />
+	
+	<!-- Necessary for core to communicate with MaaS server -->
+	<service android:name="com.phunware.core.internal.CoreService" />
+	
+	<!-- Necessary to generate a UDID -->
+	<service android:name="org.openudid.OpenUDID_service">
+		<intent-filter>
+			<action android:name="org.openudid.GETUDID" />
+		</intent-filter>
+	</service>
 </application>
 ```
 ##Install Modules
@@ -34,16 +44,20 @@ public void onCreate() {
 ```
 ###Register API Keys
 Create an class that extends `Application` and register the `Application` class in the `AndroidManifest.xml` file.
+This should be called *after* a call to install additional modules. 
 Register the access, signature, and encryption key in the `Application’s onCreate` method:
 
 ``` Java
 @Override
 public void onCreate() {
     super.onCreate();
+    /* Other Code */
+    /* Install additional modules */
     PwCoreSession.getInstanace().registerKeys(this,
                 "<my_accesskey>",
                 "<my_signaturekey>",
                 "<my_encryptionkey>");
+    /* Other code */
 }
 ```
 ######Access Key
