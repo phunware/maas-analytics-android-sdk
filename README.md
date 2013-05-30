@@ -10,7 +10,7 @@ The session is used to uniquely identify analytical data. There are only three s
 
 ###Build requirements
 The miniumum sdk level that MaaS support is version 8.
-_##Android SDK 2.2+ (API level 8) or above
+_**Android SDK 2.2+ (API level 8) or above**_
 
 
 ###Session Setup and Usage
