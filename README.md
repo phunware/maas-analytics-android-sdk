@@ -57,6 +57,14 @@ public void onCreate() {
                 "<my_accesskey>",
                 "<my_signaturekey>",
                 "<my_encryptionkey>");
+    
+    /*
+     * Alternatively, register keys when the keys are defined
+     * in the manifest under meta-data tags.
+     * Refer to the SDK documentation for how to configure the manfiest properlly.
+     */
+    //PwCoreSession.getInstance().registerKeys(this);
+    
     /* Other code */
 }
 ```
@@ -72,7 +80,7 @@ A session will expire after 20 seconds (aka Expiration Timeout) unless it is sta
 ####Start
 To start the session in an `Activity` get the `PwCoreSession` instance and call `activityStartSession(context)`.
 The passed in context can be either the `Application` context or the `Activity` context; either will suffice. *This
-should be called in the activies `onCreate` method*. This will ensure the session is properlly created before fragments
+should be called in the activites `onCreate` method*. This will ensure the session is properly created before fragments
 can be attached to the activity.
 
 ``` Java
