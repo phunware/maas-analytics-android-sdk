@@ -87,7 +87,7 @@ can be attached to the activity.
 @Override
 public void onCreate() {
     super.onCreate();
-    /* Other Code, and install modules here*/
+    /* Other Code */
     PwCoreSession.getInstanace().activityStartSession(this);
     /* Other code */
 }
@@ -136,7 +136,8 @@ Most are available without any extra permissions:
 19. Device Make
 20. Device Model
 21. Device Id
-
+22. Timestamp
+23. Timezone
 
 
 ######*Requires `ACCESS_WIFI_STATE` Permission
