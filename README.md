@@ -68,6 +68,7 @@ public void onCreate() {
     /* Other Code */
     /* Install additional modules */
     PwCoreSession.getInstanace().registerKeys(this,
+    		"<my_appid>",
                 "<my_accesskey>",
                 "<my_signaturekey>",
                 "<my_encryptionkey>");
@@ -82,12 +83,14 @@ public void onCreate() {
     /* Other code */
 }
 ```
+######Application ID
+You can find your application key in MaaS Portal
 ######Access Key
-This is the key that is unique to each application.
+A unique key that identifies the client making the request. You can find your access key in MaaS Portal.
 ######Signature Key
-This key is used to sign the header on all network calls to the MaaS server.
+A unique key that is used to sign requests. The signature is used to both check request authorization, as well as data integrity. You can find your signature key in MaaS Portal.
 ######Encryption Key
-This key is used to help encrypt data going from the the device to the MaaS server.
+The key used to encrypt and decrypt data that is exchanged between the client and the server. You can find your encryption key in MaaS Portal.
 ###Activities - Start and Stop Session
 A session is active once it is started and inactive when it has been stopped.
 A session will expire after 20 seconds (aka Expiration Timeout) unless it is started again before then.
