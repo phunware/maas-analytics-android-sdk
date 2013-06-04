@@ -67,7 +67,7 @@ public void onCreate() {
     super.onCreate();
     /* Other Code */
     /* Install additional modules */
-    PwCoreSession.getInstanace().registerKeys(this,
+    PwCoreSession.getInstance().registerKeys(this,
     		"<my_appid>",
                 "<my_accesskey>",
                 "<my_signaturekey>",
