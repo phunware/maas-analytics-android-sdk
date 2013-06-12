@@ -1,7 +1,7 @@
 #Mobile as a Service
 
 ######Android MaaS Core Documentation
-v1.0.0
+**v 1.0.0**
 
 ________________
 ##Overview
