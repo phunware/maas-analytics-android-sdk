@@ -44,6 +44,36 @@ The third helps to uniquely identify the device.
 	</service>
 </application>
 ```
+
+####Optional Setup
+There are optional configurations that can be set in the `AndroidManifest.xml`. These may be configured, however they can
+safely not be.
+
+The first is a permission `ACCESS_NETWORK_STATE`. This permission allows access to the network state (connected, disconnected, etc).
+This SDK uses it to determine if there is a network connection before sending Analyitic events. If there is no connected
+then the events are queued up to be sent when a connection is available.
+```
+<!-- Optional: if used this will check result in making network calls more efficiently. -->
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
+In addition there is a `CoreReceiver` that can be used. Currently this is only used to receive connectivity change events.
+This is also used to help send Analytic events more efficiently.
+
+```
+<!-- Used by Core for efficient Analytic Caching and Flushing -->
+<receiver android:name="com.phunware.core.internal.CoreReceiver">
+    <intent-filter>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+    </intent-filter>
+</receiver>
+```
+
+*Note:* Although the `CoreReceiver` and `ACCESS_NETWORK_STATE` permission do similar things they are still unique and
+are beneficial with simultaneous use. The receiver will get updates when connectivity changes, however so will every
+other `BroadcastReceiver` that is definied with that intent filter, so the update may not be instantaneous.
+Connectivity could drop, so checking if a connection is available could be faster and more reliable.
+The `CoreReceiver` will also send any queued up analytic events once connection is restored.
 ##Install Modules
 Each MaaS module requires the MaaS Core SDK to run. In order to use any extra modules they must first be installed into the Core SDK. This is done in code with one line and should be done in the Application’s onCreate method:
 
