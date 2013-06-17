@@ -8,7 +8,7 @@ import android.view.View.OnClickListener;
 
 import com.phunware.core.PwCoreSession;
 
-public class MainActivity extends Activity {
+public class CoreDemo extends Activity {
 
 
 	@Override
@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 		findViewById(R.id.next).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(MainActivity.this, SecondActivity.class);
+				Intent i = new Intent(CoreDemo.this, SecondActivity.class);
 				startActivity(i);
 			}
 		});
