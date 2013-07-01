@@ -10,7 +10,12 @@
     
     <!-- Necessary for core to communicate with MaaS server -->
 	<uses-permission android:name="android.permission.INTERNET" />
+	<!-- Used to efficiently communicate with MaaS Servers -->
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	
+	<!-- Used to get location analytic data -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name="com.phunware.core.sample.MyApplication"
@@ -27,6 +32,12 @@
 				<action android:name="org.openudid.GETUDID" />
 			</intent-filter>
 		</service>
+		<!-- Used by Core for efficient Analytic Caching -->
+		<receiver android:name="com.phunware.core.internal.CoreReceiver">
+		    <intent-filter>
+		        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+		    </intent-filter>
+		</receiver>
         
         <activity
             android:name="com.phunware.core.sample.CoreDemo"

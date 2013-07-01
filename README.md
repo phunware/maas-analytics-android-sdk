@@ -1,7 +1,7 @@
 #Mobile as a Service
 
 ######Android MaaS Core Documentation
-**v 1.0.0**
+**v 1.0.1**
 
 ________________
 ##Overview
@@ -21,14 +21,6 @@ The third helps to uniquely identify the device.
 ``` XML
 <!-- Necessary for core to communicate with MaaS server -->
 <uses-permission android:name="android.permission.INTERNET" />
-
-<!-- Set this permission if you want get detailed analytics -->
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
-<!-- Set these following permissions to you want to track location analytics -->    
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 <application>
 	<!-- other definitions -->
@@ -52,9 +44,18 @@ safely not be.
 The first is a permission `ACCESS_NETWORK_STATE`. This permission allows access to the network state (connected, disconnected, etc).
 This SDK uses it to determine if there is a network connection before sending Analyitic events. If there is no connected
 then the events are queued up to be sent when a connection is available.
-```
+```XML
 <!-- Optional: if used this will check result in making network calls more efficiently. -->
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+```XML
+<!-- Optional: Set this permission In order to get more detailed analytics -->
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+```
+```XML
+<!-- Optional: Set these following permissions to to get location data in analytics reports -->    
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
 
 In addition there is a `CoreReceiver` that can be used. Currently this is only used to receive connectivity change events.
@@ -127,13 +128,13 @@ A session will expire after 20 seconds (aka Expiration Timeout) unless it is sta
 ####Start
 To start the session in an `Activity` get the `PwCoreSession` instance and call `activityStartSession(context)`.
 The passed in context can be either the `Application` context or the `Activity` context; either will suffice. *This
-should be called in the activities `onCreate` method*. This will ensure the session is properly created before fragments
+should be called in the activities `onStart` method*. This will ensure the session is properly created before fragments
 can be attached to the activity.
 
 ``` Java
 @Override
-public void onCreate() {
-    super.onCreate();
+public void onStart() {
+    super.onStart();
     /* Other Code */
     PwCoreSession.getInstance().activityStartSession(this);
     /* Other code */

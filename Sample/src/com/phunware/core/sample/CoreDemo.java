@@ -16,11 +16,6 @@ public class CoreDemo extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		/*
-		 * Start Core Session
-		 */
-		PwCoreSession.getInstance().activityStartSession(this);
-		
 		findViewById(R.id.next).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -28,6 +23,14 @@ public class CoreDemo extends Activity {
 				startActivity(i);
 			}
 		});
+	}
+	@Override
+	protected void onStart() {
+		super.onStart();
+		/*
+		 * Start Core Session
+		 */
+		PwCoreSession.getInstance().activityStartSession(this);
 	}
 	
 	@Override

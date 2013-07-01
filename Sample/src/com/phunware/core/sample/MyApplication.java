@@ -13,6 +13,7 @@ public class MyApplication extends Application {
 		Resources r = getResources();
 		
 		PwCoreSession.getInstance().registerKeys(this,
+				r.getString(R.string.app_appid),
 				r.getString(R.string.app_accesskey),
 				r.getString(R.string.app_signaturekey),
 				r.getString(R.string.app_encryptionkey));
