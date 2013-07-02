@@ -203,3 +203,11 @@ be used for development and testing, not in production.
 Call the method with the line `PwCoreModule.validateManifestCoreSetup(context)`. The passed in context should be the
 application context. If there is an error then an `IllegalStateException` will be thrown with an error message on what
 couldn't be found.
+
+## Compiling with Proguard
+If you use Proguard in your app, be sure to include the following lines in your proguard configuration:
+```
+-keep class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+```
