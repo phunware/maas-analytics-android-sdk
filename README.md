@@ -213,5 +213,5 @@ If you use Proguard in your app, be sure to include the following lines in your 
 ```
 
 ## Integrating with Google Play Services API
-Google Play Services API offers many benefits that your app can use. Go to the GooglePlayServicesIntegration sample app to see how
+Google Play Services API offers many benefits that your app can use. Go to the [GooglePlayServicesIntegration sample app](https://github.com/phunware/maas-core-android-sdk/tree/master/GooglePlayServicesIntegration) to see how
 MaaS SDKs utilize the API.
