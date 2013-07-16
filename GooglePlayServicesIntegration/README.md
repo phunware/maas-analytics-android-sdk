@@ -4,13 +4,11 @@ As a developer, you are responsible for setting up an app to use the API and han
 MaaS SDK will make more efficient use of gathering location data for Analytics when integrated with Google Play Services API.
 
 ###Google Play Services API Setup
-To prepare your workspace with the API, see detailed instructions here:
-http://developer.android.com/google/play-services/setup.html
+To prepare your workspace with the API, see detailed instructions on Google's [developer website](http://developer.android.com/google/play-services/setup.html).
 
 ###Sample App
 The sample app provided here demonstrates an example of how to make an app location aware with the Location Services API.
-For detailed instructions on how to set this up from scratch, visit the setup guide:
-http://developer.android.com/training/location/retrieve-current.html
+For detailed instructions on how to set this up from scratch, visit the [setup guide](http://developer.android.com/training/location/retrieve-current.html).
 
 *The sample app requires MaaS Core SDK v1.1.0 or later.*
 
