@@ -1,7 +1,7 @@
 #Mobile as a Service
 
 ######Android MaaS Core Documentation
-**v 1.0.5**
+**v 1.1.0**
 
 ________________
 ##Overview
@@ -9,7 +9,7 @@ The MaaS Core is designed to have as little impact on developers as possible. Ma
 The session is used to uniquely identify analytical data. There are only three steps to setup and maintain sessions in any app. Application keys need to be registered, and then sessions can be started and stopped.
 
 ###Build requirements
-The miniumum sdk level that MaaS support is version 8.
+The miniumum sdk level that MaaS supports is version 8.
 _**Android SDK 2.2+ (API level 8) or above**_
 
 
@@ -211,3 +211,7 @@ If you use Proguard in your app, be sure to include the following lines in your 
     public static final android.os.Parcelable$Creator *;
 }
 ```
+
+## Integrating with Google Play Services API
+Google Play Services API offers many benefits that your app can use. Go to the GooglePlayServicesIntegration sample app to see how
+MaaS SDKs utilize the API.

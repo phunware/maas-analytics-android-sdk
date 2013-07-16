@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GooglePlayServicesIntegration</string>    
+    <string name="app_appid">24</string>
+    <string name="app_accesskey">f10adfb77b8161b0b7ef1794b92cab41766abc05</string>
+    <string name="app_signaturekey">21f434eeef0c8cd3c4d90ba9b45660ca1ecd0863</string>
+    <string name="app_encryptionkey">65as6d54f065sd4f0</string>
+</resources>
