@@ -1,7 +1,7 @@
 #Mobile as a Service
 
 ######Android MaaS Core Documentation
-**v 1.1.0**
+**v 1.1.1**
 
 ________________
 ##Overview
@@ -29,9 +29,9 @@ The third helps to uniquely identify the device.
 	<service android:name="com.phunware.core.internal.CoreService" />
 	
 	<!-- Necessary to generate a UDID -->
-	<service android:name="org.openudid.OpenUDID_service">
+	<service android:name="com.openudid.OpenUDID_service">
 		<intent-filter>
-			<action android:name="org.openudid.GETUDID" />
+			<action android:name="com.openudid.GETUDID" />
 		</intent-filter>
 	</service>
 </application>
