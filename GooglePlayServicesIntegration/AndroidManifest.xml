@@ -26,9 +26,9 @@
         <!-- Necessary for core to communicate with MaaS server -->
 	    <service android:name="com.phunware.core.internal.CoreService" />
 	    <!-- Necessary to generate a UDID -->
-	    <service android:name="com.openudid.OpenUDID_service">
+	    <service android:name="com.OpenUDID.OpenUDID_service">
 			 <intent-filter>
-				<action android:name="com.openudid.GETUDID" />
+				<action android:name="com.OpenUDID.GETUDID" />
 			</intent-filter>
 		</service>
 		<!-- Used by Core for efficient Analytic Caching -->
