@@ -30,7 +30,7 @@ The third helps to uniquely identify the device.
 	<service android:name="com.phunware.core.internal.CoreService" />
 	
 	<!-- Necessary to generate a UDID -->
-	<service android:name="com.openudid.OpenUDID_service">
+	<service android:name="com.OpenUDID.OpenUDID_service">
 		<intent-filter>
 			<action android:name="com.openudid.GETUDID" />
 		</intent-filter>
