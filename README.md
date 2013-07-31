@@ -2,7 +2,7 @@
 
 [Android MaaS Core Documentation](http://phunware.github.io/maas-core-android-sdk/)
 
-**v 1.1.1**
+**v 1.2.0**
 
 ________________
 ##Overview
@@ -127,8 +127,8 @@ The key used to encrypt and decrypt data that is exchanged between the client an
 A session is active once it is started and inactive when it has been stopped.
 A session will expire after 20 seconds (aka Expiration Timeout) unless it is started again before then.
 ####Start
-To start the session in an `Activity` get the `PwCoreSession` instance and call `activityStartSession(context)`.
-The passed in context can be either the `Application` context or the `Activity` context; either will suffice. *This
+To start the session in an `Activity` get the `PwCoreSession` instance and call `activityStartSession(activity)`.
+The passed in `Activity` should be the current activity. *This
 should be called in the activities `onStart` method*. This will ensure the session is properly created before fragments
 can be attached to the activity.
 
@@ -143,8 +143,9 @@ public void onStart() {
 ```
 
 ####Stop
-To stop the session in an `Activity` get the `PwCoreSession` instance and call `activityStopSession(context)`.
-The passed in context can be either the `Application` context or the `Activity` context; either will suffice.
+To stop the session in an `Activity` get the `PwCoreSession` instance and call `activityStopSession(activity)`.
+The passed in `Activity` should be the current activity. *This
+should be called in the activities `onStop` method*.
 
 
 ``` Java
