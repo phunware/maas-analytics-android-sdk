@@ -108,7 +108,7 @@ public void onCreate() {
     /* Other code */
 }
 ```
-####Defining keys in the Manifest
+####(Optional) Defining keys in the Manifest
 
 ```Java
 @Override
