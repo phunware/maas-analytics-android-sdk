@@ -105,16 +105,31 @@ public void onCreate() {
                 "<my_signaturekey>",
                 "<my_encryptionkey>");
     
-    /*
-     * Alternatively, register keys when the keys are defined
-     * in the manifest under meta-data tags.
-     * Refer to the SDK documentation for how to configure the manfiest properlly.
-     */
-    //PwCoreSession.getInstance().registerKeys(this);
-    
     /* Other code */
 }
 ```
+####Defining keys in the Manifest
+
+```Java
+@Override
+public void onCreate() {
+    super.onCreate();
+    /*
+     * Alternatively, register keys when the keys are defined
+     * in the manifest under meta-data tags.
+     */
+    PwCoreSession.getInstance().registerKeys(this);
+}
+```
+
+The `meta-data` tags must be defined *inside* of the `application` tag.
+```XML
+<meta-data android:name="META_DATA_APPLICATION_ID" android:value="@string/app_id" />
+<meta-data android:name="META_DATA_ACCESS_KEY" android:value="@string/access_key" />
+<meta-data android:name="META_DATA_SIGNATURE_KEY" android:value="@string/signature_key" />
+<meta-data android:name="META_DATA_ENCRYPTION_KEY" android:value="@string/encrypt_key" />
+```
+
 ######Application ID
 You can find your application key in MaaS Portal
 ######Access Key
