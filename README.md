@@ -48,12 +48,10 @@ then the events are queued up to be sent when a connection is available.
 ```XML
 <!-- Optional: if used this will check result in making network calls more efficiently. -->
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-```
-```XML
+
 <!-- Optional: Set this permission In order to get more detailed analytics -->
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-```
-```XML
+
 <!-- Optional: Set these following permissions to to get location data in analytics reports -->    
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
