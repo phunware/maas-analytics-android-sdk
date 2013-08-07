@@ -1,4 +1,8 @@
 #MaaSCore Changelog
+##1.2.1 (Wednesday, August 7th, 2013)
+ * Updated Analytics Caching to be more reliable.
+ * Added PwLog. This class can be used to view logs from all MaaS SDKs.
+ * Bug fixes
 
 ##1.2.0 (Wednesday, July 31st, 2013)
  * Deprecated activityStartSession(context) in favor of activityStartSession(activity)
