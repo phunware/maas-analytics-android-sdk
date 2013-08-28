@@ -22,7 +22,7 @@ PwCoreModule.getInstance().registerLocationClient(mLocationClient);
 ###Unregister a `LocationClient`
 When the `LocationClient` becomes disconnected be sure to unregister the `LocationClient` from MaaS Core. *Do not forget this step.*
 ```Java
-PwCoreModule.getInstance().registerLocationClient(mLocationClient);
+PwCoreModule.getInstance().unregisterLocationClient(mLocationClient);
 ```
 
 ### Compiling with Proguard
