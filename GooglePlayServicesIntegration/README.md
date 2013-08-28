@@ -15,11 +15,15 @@ For detailed instructions on how to set this up from scratch, visit the [setup g
 ###Register a `LocationClient`
 A `LocationClient` is used to get `Location` data. This must be initialized and connected to Google Play Services.
 Once it is connected, call this line to register the client in MaaS Core. This method will not accept null values.
-```PwCoreModule.getInstance().registerLocationClient(mLocationClient);```
+```Java
+PwCoreModule.getInstance().registerLocationClient(mLocationClient);
+```
 
 ###Unregister a `LocationClient`
 When the `LocationClient` becomes disconnected be sure to unregister the `LocationClient` from MaaS Core. *Do not forget this step.*
-```PwCoreModule.getInstance().registerLocationClient(mLocationClient);```
+```Java
+PwCoreModule.getInstance().registerLocationClient(mLocationClient);
+```
 
 ### Compiling with Proguard
 If you use Proguard in your app, be sure to include the following lines in your proguard configuration:
