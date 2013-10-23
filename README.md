@@ -2,16 +2,19 @@
 
 [Android MaaS Core Documentation](http://phunware.github.io/maas-core-android-sdk/)
 
-**v 1.2.1**
+**v 1.3.1**
 
 ________________
 ##Overview
-The MaaS Core is designed to have as little impact on developers as possible. MaaS Core helps to gather data for analytical purposes and also maintains a session throughout an app. MaaS Core is also a necessary requirement for all other MaaS SDKs.
+MaaS Core is designed to have as little impact on developers as possible. MaaS Core helps to gather data for analytical purposes and also maintains a session throughout an app. MaaS Core is also a necessary requirement for all other MaaS SDKs.
 The session is used to uniquely identify analytical data. There are only three steps to setup and maintain sessions in any app. Application keys need to be registered, and then sessions can be started and stopped.
 
 ###Build requirements
-The miniumum sdk level that MaaS supports is version 8.
-_**Android SDK 2.2+ (API level 8) or above**_
+* Android SDK 2.2+ (API level 8) or above.
+* Android Target 4.1.1.4
+* Android Support v4 18.0.+
+* Retrofit 1.2.2
+* Gson 2.2.4
 
 
 ###Session Setup and Usage
