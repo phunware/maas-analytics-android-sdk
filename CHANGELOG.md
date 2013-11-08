@@ -1,6 +1,14 @@
 MaaSCore Change Log
 ==========
 
+Version 1.3.2 *(2013-11-08)*
+----------------------------
+ * Session Pause events are sent much more accurately (when the app closes, the screen turns off, or device rotates, aka when there are no active activities).
+ * Removed Session Stop events.
+ * Duplicate Session Start events are no longer being sent.
+ * Using Location object to help convert location payloads.
+ * Added Throwable method variants to PwLog
+ 
 Version 1.3.1 *(2013/10/23)*
 ----------------------------
  * Bug fixes

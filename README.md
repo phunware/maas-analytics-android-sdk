@@ -2,7 +2,7 @@
 
 [Android MaaS Core Documentation](http://phunware.github.io/maas-core-android-sdk/)
 
-**v 1.3.1**
+**v 1.3.2**
 
 ________________
 ##Overview
@@ -141,7 +141,7 @@ A unique key that is used to sign requests. The signature is used to both check 
 The key used to encrypt and decrypt data that is exchanged between the client and the server. You can find your encryption key in MaaS Portal.
 ###Activities - Start and Stop Session
 A session is active once it is started and inactive when it has been stopped.
-A session will expire after 20 seconds (aka Expiration Timeout) unless it is started again before then.
+A session will expire after two minutes (aka Expiration Timeout) unless it is started again before then.
 ####Start
 To start the session in an `Activity` get the `PwCoreSession` instance and call `activityStartSession(activity)`.
 The passed in `Activity` should be the current activity. *This
