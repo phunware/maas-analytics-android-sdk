@@ -242,26 +242,8 @@ Attribution
 -----------
 MaaS Core uses the following 3rd party components. 
 
-<table>
-  <tr>
-  <th style="text-align:center;">Component</th>
-  <th style="text-align:center;">Description</th>
-  <th style="text-align:center;">License</th>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/square/retrofit">Retrofit</a></td>
-    <td>
-     Type-safe REST client for Android and Java by Square, Inc.
-    </td>
-    <td style="text-align:center;""><a href="https://github.com/square/retrofit/blob/master/LICENSE.txt">Apache 2.0</a>
-    </td>
-  </tr>
-  <tr>
-    <td><a href="https://code.google.com/p/google-gson/">GSON</a></td>
-    <td>
-     A Java library to convert JSON to Java objects and vice-versa
-    </td>
-    <td style="text-align:center;""><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>
-    </td>
-  </tr>
-</table>
+| Component     | Description   | License  |
+| ------------- |:-------------:| -----:|
+| [Retrofit](https://github.com/square/retrofit)      | Type-safe REST client for Android and Java by Square, Inc. | [Apache 2.0](https://github.com/square/retrofit/blob/master/LICENSE.txt) |
+| [GSON](https://code.google.com/p/google-gson/)      | A Java library to convert JSON to Java objects and vice-versa      |   [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) |
+
