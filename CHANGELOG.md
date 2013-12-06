@@ -1,6 +1,11 @@
 MaaSCore Change Log
 ==========
 
+Version 1.3.3 *(2013-12-06)*
+----------------------------
+ * Added utilities to be used by other MaaS SDKs.
+ * Updated Retrofit to 1.3.0
+
 Version 1.3.2 *(2013-11-08)*
 ----------------------------
  * Session Pause events are sent much more accurately (when the app closes, the screen turns off, or device rotates, aka when there are no active activities).
@@ -8,8 +13,8 @@ Version 1.3.2 *(2013-11-08)*
  * Duplicate Session Start events are no longer being sent.
  * Using Location object to help convert location payloads.
  * Added Throwable method variants to PwLog
- 
-Version 1.3.1 *(2013/10/23)*
+
+Version 1.3.1 *(2013-10-23)*
 ----------------------------
  * Bug fixes
  * Optimization of network and analytic calls

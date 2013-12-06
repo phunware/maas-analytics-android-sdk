@@ -2,7 +2,7 @@
 
 [Android MaaS Core Documentation](http://phunware.github.io/maas-core-android-sdk/)
 
-**v 1.3.2**
+**v 1.3.3**
 
 ________________
 ##Overview
@@ -13,7 +13,7 @@ The session is used to uniquely identify analytical data. There are only three s
 * Android SDK 2.2+ (API level 8) or above.
 * Android Target 4.1.1.4
 * Android Support v4 18.0.+
-* Retrofit 1.2.2
+* Retrofit 1.3.0
 * Gson 2.2.4
 
 
