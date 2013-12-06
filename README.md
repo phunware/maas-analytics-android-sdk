@@ -6,8 +6,10 @@
 
 ________________
 ##Overview
-MaaS Core is designed to have as little impact on developers as possible. MaaS Core helps to gather data for analytical purposes and also maintains a session throughout an app. MaaS Core is also a necessary requirement for all other MaaS SDKs.
-The session is used to uniquely identify analytical data. There are only three steps to setup and maintain sessions in any app. Application keys need to be registered, and then sessions can be started and stopped.
+MaaS Core is designed to have as little impact on developers as possible. It is also a necessary requirement for all other MaaS SDKs.
+
+MaaS Core also helps to gather data for analytical purposes and also maintains a session throughout an app. A session is the duration that a user interacts with an app.
+The session is used to uniquely identify analytical data. There are only two steps to setup and maintain sessions in any app. Application keys need to be registered, and then sessions can be started and stopped.
 
 ###Build requirements
 * Android SDK 2.2+ (API level 8) or above.
