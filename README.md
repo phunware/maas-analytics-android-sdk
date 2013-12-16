@@ -1,4 +1,5 @@
-#Mobile as a Service
+MaaSCore Android SDK
+================
 
 [Android MaaS Core Documentation](http://phunware.github.io/maas-core-android-sdk/)
 
