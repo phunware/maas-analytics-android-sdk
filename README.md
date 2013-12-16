@@ -5,13 +5,14 @@ MaaSCore Android SDK
 
 **v 1.3.3**
 
-________________
-##Overview
+Overview
+------------
 MaaS Core is designed to have as little impact on developers as possible. It is also a necessary requirement for all other MaaS SDKs.
 
 MaaS Core helps to gather data for analytical purposes and also maintains a session throughout an app. A session is the duration that a user interacts with an app and it's used to uniquely identify analytical data. There are only two steps to setup and maintain sessions in any app. Application keys need to be registered, then sessions can be started and stopped.
 
-###Build requirements
+Requirements
+------------
 * Android SDK 2.2+ (API level 8) or above
 * Android Target 4.1.1.4
 * Android Support v4 18.0.+
@@ -19,8 +20,17 @@ MaaS Core helps to gather data for analytical purposes and also maintains a sess
 * Gson 2.2.4
 
 
-###Session Setup and Usage
-####Update Android Manifest
+
+Documentation
+------------
+
+MaaSCore documentation is included in the Documents folder in the repository as both HTML and as a .docset. You can also find the latest documentation here: http://phunware.github.io/maas-core-ios-sdk/
+
+
+
+Session Setup and Usage
+-----------------------
+### Update Android Manifest
 The MaaS Core relies on a few settings in order to communicate with the MaaS server. 
 The first is the Internet permission, the second is a service that runs network communication asynchronously.
 The third helps to uniquely identify the device.
@@ -43,7 +53,7 @@ The third helps to uniquely identify the device.
 </application>
 ```
 
-####Optional Setup
+### Optional Setup
 There are optional configurations that can be set in the `AndroidManifest.xml`. These may be safely left unconfigured.
 
 The first is a permission `ACCESS_NETWORK_STATE`. This permission allows access to the network state (connected, disconnected, etc.).
@@ -90,7 +100,7 @@ public void onCreate() {
     /* Other code */
 }
 ```
-###Register API Keys
+### Register API Keys
 Create a class that extends `Application` and register the `Application` class in the `AndroidManifest.xml` file.
 This should be called *after* a call to install additional modules. 
 Register the access, signature and encryption key in the `Application’s onCreate` method:
@@ -110,7 +120,7 @@ public void onCreate() {
     /* Other code */
 }
 ```
-####OPTIONAL: Defining Keys in the Manifest
+### OPTIONAL: Defining Keys in the Manifest
 
 ```Java
 @Override
