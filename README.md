@@ -1,18 +1,15 @@
 MaaSCore Android SDK
 ================
 
-[Android MaaS Core Documentation](http://phunware.github.io/maas-core-android-sdk/)
+Version 1.3.3
 
-**v 1.3.3**
+This is the Android SDK for the MaaSCore module. Visit http://maas.phunware.com/ for more details and to sign up.
 
-Overview
-------------
-MaaS Core is designed to have as little impact on developers as possible. It is also a necessary requirement for all other MaaS SDKs.
 
-MaaS Core helps to gather data for analytical purposes and also maintains a session throughout an app. A session is the duration that a user interacts with an app and it's used to uniquely identify analytical data. There are only two steps to setup and maintain sessions in any app. Application keys need to be registered, then sessions can be started and stopped.
 
 Requirements
 ------------
+
 * Android SDK 2.2+ (API level 8) or above
 * Android Target 4.1.1.4
 * Android Support v4 18.0.+
@@ -24,12 +21,22 @@ Requirements
 Documentation
 ------------
 
-MaaSCore documentation is included in the Documents folder in the repository as both HTML and as a .docset. You can also find the latest documentation here: http://phunware.github.io/maas-core-ios-sdk/
+MaaSCore documentation is included in the Documents folder in the repository as both HTML and as a .jar. You can also find the latest documentation here: http://phunware.github.io/maas-core-android-sdk/
+
+
+
+Overview
+------------
+
+MaaS Core is designed to have as little impact on developers as possible. It is also a necessary requirement for all other MaaS SDKs.
+
+MaaS Core helps to gather data for analytical purposes and also maintains a session throughout an app. A session is the duration that a user interacts with an app and it's used to uniquely identify analytical data. There are only two steps to setup and maintain sessions in any app. Application keys need to be registered, then sessions can be started and stopped.
 
 
 
 Session Setup and Usage
 -----------------------
+
 ### Update Android Manifest
 The MaaS Core relies on a few settings in order to communicate with the MaaS server. 
 The first is the Internet permission, the second is a service that runs network communication asynchronously.
@@ -88,7 +95,12 @@ it is beneficial to use them simultaneously. The receiver will get updates when 
 other `BroadcastReceiver` that is definied with that intent filter will as well, so the update may not be instantaneous.
 Connectivity could drop, so checking if a connection is available may be a faster and more reliable method.
 The `CoreReceiver` will also send any queued up analytic events once connection is restored.
-##Install Modules
+
+
+
+Install Modules
+---------------
+
 Each MaaS module requires the MaaS Core SDK to run. In order to use any extra modules, they must first be installed into the Core SDK. This is done in code with one line and should be done in the application’s onCreate method:
 
 ``` Java
@@ -120,7 +132,7 @@ public void onCreate() {
     /* Other code */
 }
 ```
-### OPTIONAL: Defining Keys in the Manifest
+### Defining Keys in the Manifest (Optional)
 
 ```Java
 @Override
@@ -150,10 +162,16 @@ The Access Key is a unique key that identifies the client making the request. Yo
 The Signature Key is a unique key that is used to sign requests. The signature is used to check both request authorization and data integrity. You can find your signature key in MaaS Portal.
 ######Encryption Key
 The key used to encrypt and decrypt data that is exchanged between the client and the server. You can find your encryption key in MaaS Portal.
-###Activities: Start and Stop Session
+
+
+
+Activities: Start and Stop Session
+-------------------------
+
 A session is active once it is started and inactive when it has been stopped.
 A session will expire after two minutes (i.e. "expiration timeout") unless it is started again before then.
-####Start
+
+### Start
 To start the session in an `Activity`, get the `PwCoreSession` instance and call `activityStartSession(activity)`.
 The passed-in `Activity` should be the current activity. *This
 should be called in the activities `onStart` method*. This will ensure the session is properly created before fragments
@@ -169,7 +187,7 @@ public void onStart() {
 }
 ```
 
-####Stop
+### Stop
 To stop the session in an `Activity`, get the `PwCoreSession` instance and call `activityStopSession(activity)`.
 The passed-in `Activity` should be the current activity. *This
 should be called in the activities `onStop` method*.
@@ -187,7 +205,12 @@ public void onStop() {
 
 Calling `activityStopSession(context)` will stop the session. However, if `activityStartSession(context)` is
 called before the expiration timeout is reached, then the session will be resumed. (This is how a session persists between activity transitions.)
-###Analytical Data
+
+
+
+Analytical Data
+--------------
+
 Various types of analytical data are collected and sent to the MaaS server for usage.
 Most are available without any extra permissions:
 
@@ -225,14 +248,22 @@ to be included in the manifest. If it is not included, then the data simply will
 In order to get the device User Agent, the permission for `ACCESS_NETWORK_STATE` needs to be included in the manifest.
 If it is not included, then the data simply will not be collected.
 
-##Verify Manifest
+
+
+Verify Manifest
+---------------
+
 `PwCoreModule` has a convenience method to check if the manifest for the Core SDK is set up properly. This should only
 be used for development and testing, not in production.
 Call the method with the line `PwCoreModule.validateManifestCoreSetup(context)`. The passed-in context should be the
 application context. If there is an error then an `IllegalStateException` will be thrown with an error message on what
 couldn't be found.
 
-## Compiling with ProGuard
+
+
+Compiling with ProGuard
+-----------------------
+
 If you use ProGuard in your app, be sure to include the following lines in your ProGuard configuration:
 ```
 -keep class * implements android.os.Parcelable {
@@ -240,16 +271,23 @@ If you use ProGuard in your app, be sure to include the following lines in your 
 }
 ```
 
-## Integrating with Google Play Services API
+Integrating with Google Play Services API
+-----------------------------------------
+
 Google Play Services API offers many features that your app can use. Go to the [GooglePlayServicesIntegration sample app](https://github.com/phunware/maas-core-android-sdk/tree/master/GooglePlayServicesIntegration) to see how
 MaaS SDKs utilize the API.
 
-## PwLog
+
+
+PwLog
+-------
+
 To view logs from the MaaS SDKs, use `PwLog.setShowDebug(true);`. The logs are all turned off by default.
 
 
 Attribution
 -----------
+
 MaaS Core uses the following third-party components. 
 
 | Component     | Description   | License  |
