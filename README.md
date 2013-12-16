@@ -20,7 +20,7 @@ The session is used to uniquely identify analytical data. There are only two ste
 
 
 ###Session Setup and Usage
-Update Android Manifest
+####Update Android Manifest
 The MaaS Core relies on a few settings in order to communicate with the MaaS Server. 
 The first is the internet permission, the second is a service that runs network communication asynchronously.
 The third helps to uniquely identify the device.
