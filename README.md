@@ -1,4 +1,4 @@
-MaaSCore Android SDK
+Phunware MaaS Core SDK for Android
 ================
 
 Version 1.3.3
