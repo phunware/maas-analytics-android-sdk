@@ -3,7 +3,7 @@ MaaS Core SDK for Android
 
 Version 1.3.3
 
-This is Phunware's Android SDK for the MaaSCore module. Visit http://maas.phunware.com/ for more details and to sign up.
+This is Phunware's Android SDK for the MaaS Core module. Visit http://maas.phunware.com/ for more details and to sign up.
 
 
 
@@ -21,7 +21,7 @@ Requirements
 Documentation
 ------------
 
-MaaSCore documentation is included in the Documents folder in the repository as both HTML and as a .jar. You can also find the latest documentation here: http://phunware.github.io/maas-core-android-sdk/
+MaaS Core documentation is included in the Documents folder in the repository as both HTML and as a .jar. You can also find the latest documentation here: http://phunware.github.io/maas-core-android-sdk/
 
 
 
@@ -155,13 +155,13 @@ The `meta-data` tags must be defined *inside* of the `application` tag.
 ```
 
 ######Application ID
-You can find your application key in MaaS Portal.
+You can find your application key in MaaS portal.
 ######Access Key
-The Access Key is a unique key that identifies the client making the request. You can find your access key in MaaS Portal.
+The Access Key is a unique key that identifies the client making the request. You can find your access key in MaaS portal.
 ######Signature Key
-The Signature Key is a unique key that is used to sign requests. The signature is used to check both request authorization and data integrity. You can find your signature key in MaaS Portal.
+The Signature Key is a unique key that is used to sign requests. The signature is used to check both request authorization and data integrity. You can find your signature key in MaaS portal.
 ######Encryption Key
-The key used to encrypt and decrypt data that is exchanged between the client and the server. You can find your encryption key in MaaS Portal.
+The key used to encrypt and decrypt data that is exchanged between the client and the server. You can find your encryption key in MaaS portal.
 
 
 
