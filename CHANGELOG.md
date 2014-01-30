@@ -1,9 +1,14 @@
 MaaSCore Change Log
 ==========
 
+Version 1.3.4 *(2014-01-30)*
+----------------------------
+ * Added "osApiLevel" to standard analytic payload for retrieving Android API Level (1, 2, 3, .... 17, 18, 19, etc).
+ * Updated standard analytic payload to use schema version "1.2".
+
 Version 1.3.3 *(2013-12-06)*
 ----------------------------
- * Added utilities to be used by other MaaS SDKs.
+ * Added ParcelUtils to be used by other MaaS SDKs.
  * Updated Retrofit to 1.3.0
 
 Version 1.3.2 *(2013-11-08)*
