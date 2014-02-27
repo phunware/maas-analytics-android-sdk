@@ -1,7 +1,7 @@
 MaaS Core SDK for Android
 ================
 
-Version 1.3.4
+Version 1.3.5
 
 This is Phunware's Android SDK for the MaaS Core module. Visit http://maas.phunware.com/ for more details and to sign up.
 

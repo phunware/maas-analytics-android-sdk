@@ -1,6 +1,10 @@
 MaaSCore Change Log
 ==========
 
+Version 1.3.5 *(2014-02-26)*
+----------------------------
+ * Fixed builds to produce Java 6 compatible binaries using 'sourceCompatibility' and 'targetCompatibility' equal to '1.6'.
+ 
 Version 1.3.4 *(2014-01-30)*
 ----------------------------
  * Added "osApiLevel" to standard analytic payload for retrieving Android API Level (1, 2, 3, .... 17, 18, 19, etc).
