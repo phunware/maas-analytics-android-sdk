@@ -1,10 +1,33 @@
 MaaSCore Change Log
 ==========
 
+Version 1.3.9 *(2014-11-11)*
+----------------------------
+ * Fixed missing http response cache issue
+
+Version 1.3.8 *(2014-07-28)*
+----------------------------
+ * Add device type into analytic payload
+ * Updated schema version to 1.3
+
+Version 1.3.7 *(2014-06-16)*
+----------------------------
+ * Updated 'com.squareup.okhttp' to 1.6.0
+ * Added 'okhttp-urlconnection (com.squareup.okhttp)' 1.6.0
+ * Updated 'com.squareup.retrofit' to 1.6.0
+
+Version 1.3.6 *(2014-03-27)*
+----------------------------
+ * Added HTTP-based cache support to Network operations.
+ * Added cache delete/flush method
+ * Updated 'com.squareup.okhttp' to 1.5.2
+ * Updated 'com.squareup.retrofit' to 1.5.0
+ * Code cleanup/refactoring
+
 Version 1.3.5 *(2014-02-26)*
 ----------------------------
  * Fixed builds to produce Java 6 compatible binaries using 'sourceCompatibility' and 'targetCompatibility' equal to '1.6'.
- 
+
 Version 1.3.4 *(2014-01-30)*
 ----------------------------
  * Added "osApiLevel" to standard analytic payload for retrieving Android API Level (1, 2, 3, .... 17, 18, 19, etc).
