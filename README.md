@@ -1,7 +1,7 @@
 MaaS Core SDK for Android
 ================
 
-Version 1.3.5
+Version 1.3.9
 
 This is Phunware's Android SDK for the MaaS Core module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -13,8 +13,10 @@ Requirements
 * Android SDK 2.2+ (API level 8) or above
 * Android Target 4.1.1.4
 * Android Support v4 18.0.+
-* Retrofit 1.3.0
 * Gson 2.2.4
+* OkHttp 1.6.0
+* okhttp-urlconnection 1.6.0
+* Retrofit 1.6.0
 
 
 
@@ -38,7 +40,7 @@ Session Setup and Usage
 -----------------------
 
 ### Update Android Manifest
-The MaaS Core relies on a few settings in order to communicate with the MaaS server. 
+The MaaS Core relies on a few settings in order to communicate with the MaaS server.
 The first is the Internet permission, the second is a service that runs network communication asynchronously.
 The third helps to uniquely identify the device.
 ``` XML
@@ -47,10 +49,10 @@ The third helps to uniquely identify the device.
 
 <application>
 	<!-- other definitions -->
-	
+
 	<!-- Necessary for MaaS Core to communicate with MaaS server -->
 	<service android:name="com.phunware.core.internal.CoreService" />
-	
+
 	<!-- Necessary to generate a UDID -->
 	<service android:name="com.OpenUDID.OpenUDID_service">
 		<intent-filter>
@@ -73,7 +75,7 @@ then the events are queued up to be sent when a connection is available.
 <!-- Optional: Set this permission in order to get more detailed analytics. -->
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-<!-- Optional: Set these following permissions to to get location data in analytics reports -->    
+<!-- Optional: Set these following permissions to to get location data in analytics reports -->
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
@@ -114,7 +116,7 @@ public void onCreate() {
 ```
 ### Register API Keys
 Create a class that extends `Application` and register the `Application` class in the `AndroidManifest.xml` file.
-This should be called *after* a call to install additional modules. 
+This should be called *after* a call to install additional modules.
 Register the access, signature and encryption key in the `Application’s onCreate` method:
 
 ``` Java
@@ -128,7 +130,7 @@ public void onCreate() {
                 "<my_accesskey>",
                 "<my_signaturekey>",
                 "<my_encryptionkey>");
-    
+
     /* Other code */
 }
 ```
@@ -288,10 +290,9 @@ To view logs from the MaaS SDKs, use `PwLog.setShowDebug(true);`. The logs are a
 Attribution
 -----------
 
-MaaS Core uses the following third-party components. 
+MaaS Core uses the following third-party components.
 
 | Component     | Description   | License  |
 | ------------- |:-------------:| -----:|
 | [Retrofit](https://github.com/square/retrofit)      | Type-safe REST client for Android and Java by Square, Inc. | [Apache 2.0](https://github.com/square/retrofit/blob/master/LICENSE.txt) |
 | [GSON](https://code.google.com/p/google-gson/)      | A Java library to convert JSON to Java objects and vice-versa.      |   [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) |
-
