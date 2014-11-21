@@ -46,6 +46,7 @@ The third helps to uniquely identify the device.
 ``` XML
 <!-- Necessary for MaaS Core to communicate with MaaS server -->
 <uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.GET_TASKS" />
 
 <application>
 	<!-- other definitions -->
