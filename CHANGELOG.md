@@ -1,6 +1,10 @@
 MaaSCore Change Log
 ==========
 
+Version 1.3.10 *(2014-11-21)*
+----------------------------
+ * Fixed sending analytics event while Android restart service issue
+
 Version 1.3.9 *(2014-11-11)*
 ----------------------------
  * Fixed missing http response cache issue
