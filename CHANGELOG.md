@@ -1,7 +1,7 @@
 MaaSCore Change Log
 ==========
 
-Version 1.3.11 *(2014-12-5)*
+Version 1.3.11 *(2014-12-9)*
 ----------------------------
  * Avoid use GET_TASKS permission
 
