@@ -1,6 +1,10 @@
 MaaSCore Change Log
 ==========
 
+Version 1.3.11 *(2014-12-9)*
+----------------------------
+ * Avoid use GET_TASKS permission
+
 Version 1.3.10 *(2014-11-21)*
 ----------------------------
  * Fixed sending analytics event while Android restart service issue
