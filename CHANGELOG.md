@@ -1,6 +1,10 @@
 MaaSCore Change Log
 ==========
 
+Version 1.3.12 *(2015-02-02)*
+----------------------------
+ * Updated Google Play Service to 6.+
+
 Version 1.3.11 *(2014-12-9)*
 ----------------------------
  * Avoid use GET_TASKS permission
