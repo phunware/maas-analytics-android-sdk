@@ -100,7 +100,7 @@ The `CoreReceiver` will also send any queued-up analytic events once connection 
 Install Modules
 ---------------
 
-Each MaaS module requires the MaaS Core SDK to run. In order to use any extra modules, they must first be installed into the Core SDK. This is done in code with one line and should be done in the application’s onCreate method:
+Each module requires the Core SDK to run. In order to use any extra modules, they must first be installed into the Core SDK. This is done in code with one line and should be done in the application’s onCreate method:
 
 ``` Java
 @Override
@@ -154,7 +154,7 @@ The `meta-data` tags must be defined *inside* of the `application` tag.
 ```
 
 ######Application ID
-You can find your application key in MaaS portal.
+You can find your application key in the MaaS portal.
 ######Access Key
 The access key is a unique key that identifies the client making the request. You can find your access key in the MaaS portal.
 ######Signature Key
@@ -238,7 +238,7 @@ Most are available without any extra permissions:
 23. Timezone
 
 
-######*Requires `ACCESS_WIFI_STATE` Permission
+######* Requires `ACCESS_WIFI_STATE` Permission
 In order to get MAC Address, Wi-Fi Info, SSID and IP data, the permission for `ACCESS_WIFI_STATE` will need
 to be included in the manifest. If it is not included, the data will not be collected.
 
