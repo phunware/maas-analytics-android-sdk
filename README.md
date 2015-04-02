@@ -1,6 +1,8 @@
 MaaS Analytics SDK for Android
 ==================
 
+[![Join the chat at https://gitter.im/phunware/maas-analytics-android-sdk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/phunware/maas-analytics-android-sdk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Version 1.3.4
 
 This is Phunware's Android SDK for the Analytics module. Visit http://maas.phunware.com/ for more details and to sign up.
