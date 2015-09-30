@@ -4,6 +4,7 @@ MaaSCore Change Log
 Version 1.3.13 *(2015-09-30)*
 ----------------------------
  * Change phunware.com endpoints to HTTPS
+ * Rename the lib name from MaaSCore.jar to PWCore.jar.
  
 Version 1.3.12 *(2015-02-02)*
 ----------------------------
