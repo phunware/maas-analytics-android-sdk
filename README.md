@@ -1,7 +1,7 @@
 MaaS Core SDK for Android
 ================
 
-Version 1.3.12
+Version 1.3.13
 
 This is Phunware's Android SDK for the Core module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -10,7 +10,7 @@ Requirements
 ------------
 
 * Android SDK 2.2+ (API level 8) or above
-* Android Target 4.1.1.4
+* Android Target 4.4.2
 * Android Support v4 18.0.+
 * Gson 2.2.4
 * OkHttp 1.6.0
