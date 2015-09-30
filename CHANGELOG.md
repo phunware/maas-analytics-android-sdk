@@ -3,7 +3,7 @@ MaaSCore Change Log
 
 Version 1.3.13 *(2015-09-30)*
 ----------------------------
- * Change HTTP endpoints to HTTPS
+ * Change phunware.com endpoints to HTTPS
  
 Version 1.3.12 *(2015-02-02)*
 ----------------------------
