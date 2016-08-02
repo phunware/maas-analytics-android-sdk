@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PwCore Demo</string>
+
+    <string name="app_appid"></string>
+    <string name="app_accesskey"></string>
+    <string name="app_signaturekey"></string>
+    <string name="app_encryptionkey"></string>
+
+    <string name="title_activity_second">SecondActivity</string>
+</resources>
