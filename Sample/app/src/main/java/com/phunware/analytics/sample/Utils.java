@@ -3,7 +3,6 @@ package com.phunware.analytics.sample;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.http.message.BasicNameValuePair;
 
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -11,7 +10,7 @@ import android.content.res.Resources;
 public class Utils {
 	
 	/**
-	 * Get a {@link BasicNameValuePair} object with a parameter for Orientation
+	 * Get a map object with a parameter for Orientation
 	 * @param r app resources object
 	 * @return
 	 */
