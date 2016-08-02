@@ -1,11 +1,17 @@
 MaaSCore Change Log
 ==========
 
+Version 3.0.0 *(2016-08-02)*
+----------------------------
+ * Updated to Google Play Services 9.0.2
+ * Updated 'com.squareup.okhttp' to 3.2.0
+ * Removed Retrofit requirement
+
 Version 1.3.13 *(2015-09-30)*
 ----------------------------
  * Change phunware.com endpoints to HTTPS
  * Rename the lib name from MaaSCore.jar to PWCore.jar.
- 
+
 Version 1.3.12 *(2015-02-02)*
 ----------------------------
  * Updated Google Play Service to 6.+
