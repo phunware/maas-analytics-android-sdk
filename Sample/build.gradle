@@ -17,11 +17,7 @@ allprojects {
         jcenter()
 
         maven {
-            credentials {
-                username ''
-                password ''
-            }
-            url "https://nexus.phunware.com/content/groups/phunware-mapping/"
+            url "https://nexus.phunware.com/content/groups/public/"
         }
 
     }
