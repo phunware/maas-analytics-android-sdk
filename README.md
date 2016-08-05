@@ -40,11 +40,7 @@ projects {
   repositories {
     ...
     maven {
-        credentials {
-            username 'username'
-            password 'password'
-        }
-        url "https://nexus.phunware.com/content/groups/phunware-core/"
+        url "https://nexus.phunware.com/content/groups/public/"
     }
     ...
   }
@@ -78,8 +74,9 @@ then the events are queued up to be sent when a connection is available.
 
 <!-- Optional: Set these following permissions to get location data in analytics reports -->
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
+Note: you will need to request location permissions on Android API 23+.  There is an example in the sample app.
+
 
 Additionally, there is a `CoreReceiver` that can be used. Currently, this is only used to receive connectivity change events.
 This is also used to help send analytic events more efficiently.
