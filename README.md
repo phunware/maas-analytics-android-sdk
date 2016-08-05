@@ -118,37 +118,6 @@ This should be called *after* a call to install additional modules.
 
 Additionally,  for API 23+, you must wait to call `registerKeys` after Location permission has been granted.  Please see the sample app for an example of how to implement.
 
-Register the access, signature and encryption key in the `Application’s onCreate` method:
-
-``` Java
-@Override
-public void onCreate() {
-    super.onCreate();
-    /* other code */
-    /* install additional modules */
-    PwCoreSession.getInstance().registerKeys(this,
-    		"<my_appid>",
-                "<my_accesskey>",
-                "<my_signaturekey>",
-                "<my_encryptionkey>");
-
-    /* other code */
-}
-```
-### Defining Keys in the Manifest (Optional)
-
-```Java
-@Override
-public void onCreate() {
-    super.onCreate();
-    /*
-     * Alternatively, register keys when the keys are defined
-     * in the manifest under metadata tags.
-     */
-    PwCoreSession.getInstance().registerKeys(this);
-}
-```
-
 The `meta-data` tags must be defined *inside* of the `application` tag.
 ```XML
 <meta-data android:name="META_DATA_APPLICATION_ID" android:value="@string/app_id" />
