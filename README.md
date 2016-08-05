@@ -1,7 +1,7 @@
 MaaS Core SDK for Android
 ================
 
-Version 1.3.13
+Version 3.0.0
 
 This is Phunware's Android SDK for the Core module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -9,20 +9,13 @@ This is Phunware's Android SDK for the Core module. Visit http://maas.phunware.c
 Requirements
 ------------
 
-* Android SDK 2.2+ (API level 8) or above
-* Android Target 4.4.2
-* Android Support v4 18.0.+
-* Gson 2.2.4
-* OkHttp 1.6.0
-* okhttp-urlconnection 1.6.0
-* Retrofit 1.6.0
-
+* Android SDK 4.0.3+ (API level 15) or above
 
 
 Documentation
 ------------
 
-MaaS Core documentation is included in the Documents folder in the repository as both HTML and as a .jar. You can also find the latest documentation here: http://phunware.github.io/maas-core-android-sdk/
+MaaS Core documentation is included in the Documents folder in the repository as both HTML and via maven. You can also find the latest documentation here: http://phunware.github.io/maas-core-android-sdk/
 
 
 
@@ -38,26 +31,33 @@ MaaS Core helps to gather data for analytical purposes and also maintains a sess
 Session Setup and Usage
 -----------------------
 
-### Update Android Manifest
-The MaaS Core relies on a few settings in order to communicate with the MaaS server. The first is the Internet permission, the second is a service that runs network communications asynchronously and the third helps to uniquely identify the device.
-``` XML
-<!-- necessary for MaaS Core to communicate with the MaaS server -->
-<uses-permission android:name="android.permission.INTERNET" />
+### Setup
 
-<application>
-	<!-- other definitions -->
+Add the following to your `repositories` tag in your top level `build.gradle` file.
 
-	<!-- necessary for MaaS Core to communicate with the MaaS server -->
-	<service android:name="com.phunware.core.internal.CoreService" />
-
-	<!-- necessary to generate a UDID -->
-	<service android:name="com.OpenUDID.OpenUDID_service">
-		<intent-filter>
-			<action android:name="com.openudid.GETUDID" />
-		</intent-filter>
-	</service>
-</application>
+```XML
+projects {
+  repositories {
+    ...
+    maven {
+        url "https://nexus.phunware.com/content/groups/public/"
+    }
+    ...
+  }
+}
 ```
+Make sure to replace the username and password with your provided credentials.
+
+In the `dependencies` tag in your app's `build.gradle`,  add the following line:
+
+```XML
+dependencies {
+  ...
+  compile 'com.phunware.core:core:3.0.0'
+  ...
+}
+```
+
 
 ### Optional Setup
 There are optional configurations that can be set in the `AndroidManifest.xml`. These may be safely left unconfigured.
@@ -74,8 +74,9 @@ then the events are queued up to be sent when a connection is available.
 
 <!-- Optional: Set these following permissions to get location data in analytics reports -->
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
+Note: you will need to request location permissions on Android API 23+.  There is an example in the sample app.
+
 
 Additionally, there is a `CoreReceiver` that can be used. Currently, this is only used to receive connectivity change events.
 This is also used to help send analytic events more efficiently.
@@ -114,36 +115,8 @@ public void onCreate() {
 ### Register API Keys
 Create a class that extends `Application` and register the `Application` class in the `AndroidManifest.xml` file.
 This should be called *after* a call to install additional modules.
-Register the access, signature and encryption key in the `Application’s onCreate` method:
 
-``` Java
-@Override
-public void onCreate() {
-    super.onCreate();
-    /* other code */
-    /* install additional modules */
-    PwCoreSession.getInstance().registerKeys(this,
-    		"<my_appid>",
-                "<my_accesskey>",
-                "<my_signaturekey>",
-                "<my_encryptionkey>");
-
-    /* other code */
-}
-```
-### Defining Keys in the Manifest (Optional)
-
-```Java
-@Override
-public void onCreate() {
-    super.onCreate();
-    /*
-     * Alternatively, register keys when the keys are defined
-     * in the manifest under metadata tags.
-     */
-    PwCoreSession.getInstance().registerKeys(this);
-}
-```
+Additionally,  for API 23+, you must wait to call `registerKeys` after Location permission has been granted.  Please see the sample app for an example of how to implement.
 
 The `meta-data` tags must be defined *inside* of the `application` tag.
 ```XML
@@ -270,13 +243,6 @@ If you use ProGuard in your app, be sure to include the following lines in your 
 }
 ```
 
-Integrating with Google Play Services API
------------------------------------------
-
-Google Play Services API offers many features that your app can use. Go to the [GooglePlayServicesIntegration sample app](https://github.com/phunware/maas-core-android-sdk/tree/master/GooglePlayServicesIntegration) to see how
-MaaS SDKs utilize the API.
-
-
 
 PwLog
 -------
@@ -291,5 +257,5 @@ MaaS Core uses the following third-party components:
 
 | Component     | Description   | License  |
 | ------------- |:-------------:| -----:|
-| [Retrofit](https://github.com/square/retrofit)      | Type-safe REST client for Android and Java by Square, Inc. | [Apache 2.0](https://github.com/square/retrofit/blob/master/LICENSE.txt) |
-| [GSON](https://code.google.com/p/google-gson/)      | A Java library to convert JSON to Java objects and vice-versa.      |   [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) |
+| [okhttp](https://github.com/square/okhttp)        | An HTTP+HTTP/2 client for Android and Java applications by Square, Inc. | [Apache 2.0](https://github.com/square/okhttp/blob/master/LICENSE.txt) |
+| [GSON](https://code.google.com/p/google-gson/)    | A Java library to convert JSON to Java objects and vice-versa.         | [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) |
