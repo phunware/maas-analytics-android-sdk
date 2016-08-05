@@ -115,6 +115,9 @@ public void onCreate() {
 ### Register API Keys
 Create a class that extends `Application` and register the `Application` class in the `AndroidManifest.xml` file.
 This should be called *after* a call to install additional modules.
+
+Additionally,  for API 23+, you must wait to call `registerKeys` after Location permission has been granted.  Please see the sample app for an example of how to implement.
+
 Register the access, signature and encryption key in the `Application’s onCreate` method:
 
 ``` Java
