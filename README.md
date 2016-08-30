@@ -1,7 +1,7 @@
 MaaS Core SDK for Android
 ================
 
-Version 3.0.0
+Version 3.0.1
 
 This is Phunware's Android SDK for the Core module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -53,7 +53,7 @@ In the `dependencies` tag in your app's `build.gradle`,  add the following line:
 ```XML
 dependencies {
   ...
-  compile 'com.phunware.core:core:3.0.0'
+  compile 'com.phunware.core:core:3.0.1'
   ...
 }
 ```
