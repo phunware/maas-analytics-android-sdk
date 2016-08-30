@@ -1,16 +1,16 @@
-MaaSCore Change Log
+Core Change Log
 ==========
+
+Version 3.0.1 *(2016-08-30)*
+----------------------------
+ * fix for null session ids
+ * analytics changes and fixes
 
 Version 3.0.0 *(2016-08-02)*
 ----------------------------
  * Updated to Google Play Services 9.0.2
  * Updated 'com.squareup.okhttp' to 3.2.0
  * Removed Retrofit requirement
-
-Version 1.3.13 *(2015-09-30)*
-----------------------------
- * Change phunware.com endpoints to HTTPS
- * Rename the lib name from MaaSCore.jar to PWCore.jar.
 
 Version 1.3.12 *(2015-02-02)*
 ----------------------------
@@ -30,7 +30,7 @@ Version 1.3.9 *(2014-11-11)*
 
 Version 1.3.8 *(2014-07-28)*
 ----------------------------
- * Add device type into analytic payload
+ * Add device type into analytic payload 
  * Updated schema version to 1.3
 
 Version 1.3.7 *(2014-06-16)*
