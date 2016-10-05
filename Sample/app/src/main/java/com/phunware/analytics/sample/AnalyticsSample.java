@@ -19,8 +19,6 @@ import com.phunware.core.PwCoreSession;
 
 public class AnalyticsSample extends ListActivity {
 	private static final String TAG = "AnalyticsSample";
-	private boolean permissionGranted;
-	private static final int RC_PERM = 2000;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,16 +27,22 @@ public class AnalyticsSample extends ListActivity {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
 				getResources().getStringArray(R.array.planets));
 		setListAdapter(adapter);
-		checkPermissions();
 
+		PwCoreSession.getInstance().registerKeys(this,
+				getString(R.string.app_appid),
+				getString(R.string.app_accesskey),
+				getString(R.string.app_signaturekey),
+				getString(R.string.app_encryptionkey));
+
+		PwAnalyticsModule.addEvent(this, "Featured Page View");
+		PwAnalyticsModule.startTimedEvent(this, "My Awesome Game Level 1");
+		PwAnalyticsModule.endTimedEvent(this, "My Awesome Game Level 1");
 	}
 	
 	@Override
 	protected void onStart() {
 		super.onStart();
-		if (!permissionGranted) {
-			return;
-		}
+
 		PwCoreSession.getInstance().activityStartSession(this);
 		//start timing how long the user is on this activity. Do this here so that
 		//the time doesn't account for the time the screen is off.
@@ -76,59 +80,10 @@ public class AnalyticsSample extends ListActivity {
 	@Override
 	protected void onStop() {
 		super.onStop();
-		if (!permissionGranted) {
-			return;
-		}
+
 		PwCoreSession.getInstance().activityStopSession(this);
 		//Stop timing the event for how long the user is on this activity.
 		//Send the parameter for the current orientation.
 		PwAnalyticsModule.endTimedEventWithParameters(this, TAG, Utils.getOrientationParam(getResources()) );
-	}
-
-
-	private void checkPermissions() {
-		if (!canAccessLocation()) {
-			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-				requestPermissions(new String[]{android.Manifest.permission.ACCESS_COARSE_LOCATION}, RC_PERM);
-			}
-		} else {
-			onLocationPermissionGranted();
-		}
-	}
-
-	private boolean canAccessLocation() {
-		return(hasPermission(android.Manifest.permission.ACCESS_COARSE_LOCATION));
-	}
-
-	private boolean hasPermission(String perm) {
-
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-			return(PackageManager.PERMISSION_GRANTED == checkSelfPermission(perm));
-		}
-		return true;
-	}
-
-	@Override
-	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-		if (requestCode == RC_PERM) {
-			if (canAccessLocation()) {
-				onLocationPermissionGranted();
-			} else {
-				Toast.makeText(AnalyticsSample.this, "Location permission denied", Toast.LENGTH_SHORT).show();
-			}
-		}
-	}
-
-	private void onLocationPermissionGranted() {
-		permissionGranted = true;
-		PwCoreSession.getInstance().registerKeys(this,
-				getString(R.string.app_appid),
-				getString(R.string.app_accesskey),
-				getString(R.string.app_signaturekey),
-				getString(R.string.app_encryptionkey));
-
-		PwAnalyticsModule.addEvent(this, "Featured Page View");
-		PwAnalyticsModule.startTimedEvent(this, "My Awesome Game Level 1");
-		PwAnalyticsModule.endTimedEvent(this, "My Awesome Game Level 1");
 	}
 }

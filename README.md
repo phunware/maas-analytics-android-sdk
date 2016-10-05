@@ -1,7 +1,7 @@
 MaaS Analytics SDK for Android
 ==================
 
-Version 1.3.6
+Version 1.3.7
 
 This is Phunware's Android SDK for the Analytics module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -43,7 +43,7 @@ Add the following to your `repositories` tag in your top level `build.gradle` fi
 
 Import the Phunware Analytics library by adding the following to your app's `build.gradle` file:
 ```
-compile 'com.phunware.analytics:analytics:1.3.6'
+compile 'com.phunware.analytics:analytics:1.3.7'
 ```
 
 Update your `AndroidManifest.xml` to include the following permissions:

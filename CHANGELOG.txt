@@ -1,6 +1,10 @@
 MaaSAnalytics Changelog
 ==========
 
+Version 1.3.7 *(2016-10-05)*
+----------------------------
+ * Updated to Core 3.0.2
+
 Version 1.3.6 *(2016-08-01)*
 ----------------------------
  * Switched from .jar packaging to maven repository
