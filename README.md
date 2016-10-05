@@ -53,7 +53,7 @@ In the `dependencies` tag in your app's `build.gradle`,  add the following line:
 ```XML
 dependencies {
   ...
-  compile 'com.phunware.core:core:3.0.1'
+  compile 'com.phunware.core:core:3.0.2'
   ...
 }
 ```
