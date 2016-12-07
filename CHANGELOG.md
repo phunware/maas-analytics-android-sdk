@@ -1,6 +1,10 @@
 Core Change Log
 ==========
 
+Version 3.0.3 *(2016-12-07)*
+----------------------------
+ * Analytics endpoint fix
+
 Version 3.0.2 *(2016-10-05)*
 ----------------------------
  * Updated to Google Play Services 9.6.1
