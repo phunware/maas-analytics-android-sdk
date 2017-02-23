@@ -259,3 +259,5 @@ MaaS Core uses the following third-party components:
 | ------------- |:-------------:| -----:|
 | [okhttp](https://github.com/square/okhttp)        | An HTTP+HTTP/2 client for Android and Java applications by Square, Inc. | [Apache 2.0](https://github.com/square/okhttp/blob/master/LICENSE.txt) |
 | [GSON](https://code.google.com/p/google-gson/)    | A Java library to convert JSON to Java objects and vice-versa.         | [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) |
+
+You understand and consent to Phunware’s Privacy Policy located at www.phunware.com/privacy. If your use of Phunware’s software requires a Privacy Policy of your own, you also agree to include the terms of Phunware’s Privacy Policy in your Privacy Policy to your end users.
