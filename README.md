@@ -75,7 +75,7 @@ Integration
 ### Adding Events
 
 To add events with Pw Analytics:
-*You can add events until after you call `registerKeys` on `PwCoreSession.getInstance()`*
+*You cannot add events until after you call `registerKeys` on `PwCoreSession.getInstance()`*
 
 ```JAVA
 public class AnalyticsSample extends Activity
