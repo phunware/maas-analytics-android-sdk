@@ -17,6 +17,10 @@ Documentation
 
 MaaS Core documentation is included in the Documents folder in the repository as both HTML and via maven. You can also find the latest documentation here: http://phunware.github.io/maas-core-android-sdk/
 
+** NOTE **
+
+If updating to version 3.0.0+, all other dependent Phunware SDK's also must be updated
+
 
 
 Overview
