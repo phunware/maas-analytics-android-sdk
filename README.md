@@ -40,7 +40,7 @@ Session Setup and Usage
 Add the following to your `repositories` tag in your top level `build.gradle` file.
 
 ```XML
-projects {
+allProjects {
   repositories {
     ...
     maven {
