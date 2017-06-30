@@ -1,6 +1,13 @@
 Core Change Log
 ==========
 
+Version 3.1.0 *(2017-06-29)*
+----------------------------
+ * Added Analytics and CME as part of Core SDK 3.1.0
+ * updated libraries
+ * Removed OpenUDID and CoreService
+ * various bug fixes
+
 Version 3.0.3 *(2016-12-07)*
 ----------------------------
  * Analytics endpoint fix
