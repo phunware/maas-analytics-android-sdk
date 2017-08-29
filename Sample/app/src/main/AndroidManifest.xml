@@ -7,7 +7,14 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:name=".App"
         android:theme="@style/AppTheme" >
+
+        <meta-data android:name="com.phunware.APPLICATION_ID" android:value="@string/app_appid" />
+        <meta-data android:name="com.phunware.ACCESS_KEY" android:value="@string/app_accesskey" />
+        <meta-data android:name="com.phunware.SIGNATURE_KEY" android:value="@string/app_signaturekey" />
+        <meta-data android:name="com.phunware.ENCRYPTION_KEY" android:value="" />
+
         <activity
             android:name="com.phunware.core.sample.CoreDemo"
             android:label="@string/app_name" >
