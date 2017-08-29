@@ -1,6 +1,11 @@
 Core Change Log
 ==========
 
+Version 3.1.1 *(2017-08-29)*
+----------------------------
+ * Added PwActivityLifecycleCallback
+ * various bug fixes
+
 Version 3.1.0 *(2017-08-02)*
 ----------------------------
  * Added Analytics and CME as part of Core SDK 3.1.0
