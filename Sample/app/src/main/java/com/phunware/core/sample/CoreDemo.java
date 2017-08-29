@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.phunware.core.PwCoreSession;
-
 public class CoreDemo extends Activity {
 
     @Override
@@ -22,30 +20,5 @@ public class CoreDemo extends Activity {
                 startActivity(i);
             }
         });
-
-        PwCoreSession.getInstance().registerKeys(this,
-                getString(R.string.app_appid),
-                getString(R.string.app_accesskey),
-                getString(R.string.app_signaturekey),
-                getString(R.string.app_encryptionkey));
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-		/*
-		 * Start Core Session
-		 */
-        PwCoreSession.getInstance().activityStartSession(this);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-		/*
-		 * Stop Core Session
-		 */
-        PwCoreSession.getInstance().activityStopSession(this);
     }
 }
