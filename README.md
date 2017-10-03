@@ -25,9 +25,8 @@ public void onCreate() {
 
 Attribution
 -----------
-MaaS Mapping uses the following 3rd party components.
+MaaS Core uses the following 3rd party components.
 
 | Component     | Description   | License  |
 | ------------- |:-------------:| -----:|
 | [OkHttp](https://github.com/square/okhttp)      | An HTTP & SPDY client for Android and Java applications. | [Apache 2.0](https://github.com/square/okhttp/blob/master/LICENSE.txt) |
-| [Retrofit](https://github.com/square/retrofit)  | Type-safe REST client for Android and Java applications. | [Apache 2.0](https://github.com/square/retrofit/blob/master/LICENSE.txt) |
