@@ -1,6 +1,11 @@
 Core Change Log
 ==========
 
+Version 3.2.0 *(2017-10-02)*
+----------------------------
+ * Updated to Google Play Service 11.4.0
+ * Refactor of public APIs, see migration.md for more info
+
 Version 3.1.1 *(2017-08-29)*
 ----------------------------
  * Added PwActivityLifecycleCallback
