@@ -1,5 +1,22 @@
 # Migration guide
 
+## 3.2.x to 3.3.0
+
+### Library updates
+- compileSdkVersion - 27
+- buildToolsVersion - 27.0.3
+- targetSdkVersion - 26
+- Support Library version - 27.1.0
+- Google Play Services version - 11.8.0
+- Okhttp version - 3.10.0
+- Gson version - 2.8.2
+
+#### Removed Classes
+- com.phunware.core.internal.LocationServicesListener
+
+#### Changes
+- fixed typo in com.phunware.core.analytics.PwAnalyticsModule: MAX_PARMETER_CHAR_LIMIT changed to MAX_PARAMETER_CHAR_LIMIT
+
 ## 3.1.x to 3.2.0
 
 ### Library updates
