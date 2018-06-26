@@ -1,5 +1,10 @@
 # Migration guide
 
+## 3.3.0 to 3.4.0
+
+### Changes
+- CMEModule : added depth parameter to `getContents()` methods
+
 ## 3.2.x to 3.3.0
 
 ### Library updates
