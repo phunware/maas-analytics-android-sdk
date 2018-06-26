@@ -6,7 +6,7 @@ MaaS Core
 **v3.4.0**
 ________________
 
-##Overview
+## Overview
 MaaS Core is an all-inclusive Android SDK provided by Phunware.
 
 Core's default caching behavior is 'no cache'. To use/enable caching, the App (SiteVision, etc)
