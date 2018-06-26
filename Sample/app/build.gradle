@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile 'com.phunware.core:core:3.3.0'
+    compile 'com.phunware.core:core:3.4.0'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
