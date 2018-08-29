@@ -1,4 +1,8 @@
 # Core Change Log
+## Version 3.4.1 *(2018-08-29)*
+#### Features
+* Crash fix for certain Android 8.0 devices
+
 ## Version 3.4.0 *(2018-06-26)*
 #### Features
 * Refactor of CME APIs, see migration.md for more info
