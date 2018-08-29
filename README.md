@@ -3,7 +3,7 @@ MaaS Core
 
 [Android MaaS Core Documentation](http://phunware.github.io/maas-core-android-sdk/)
 
-**v3.4.0**
+**v3.4.1**
 ________________
 
 ## Overview
