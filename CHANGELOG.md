@@ -1,4 +1,8 @@
 # Core Change Log
+## Version 3.4.2 *(2018-09-12)*
+#### Features
+* added Logger interface
+
 ## Version 3.4.1 *(2018-08-29)*
 #### Features
 * Crash fix for certain Android 8.0 devices
