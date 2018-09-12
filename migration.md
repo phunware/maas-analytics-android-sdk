@@ -1,5 +1,10 @@
 # Migration guide
 
+## 3.4.1 to 3.4.2
+
+### Changes
+- PwLog : deprecated `p()` methods
+
 ## 3.3.0 to 3.4.0
 
 ### Changes
