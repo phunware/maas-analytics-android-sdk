@@ -1,4 +1,11 @@
 # Core Change Log
+## Version 3.5.0 *(2018-12-14)*
+#### Features
+* New Analytics API - old methods deprecated see Migration.md for more info.
+* Google Play Services 16.0.0
+#### Bug Fixes
+* Removed Bluetooth permission
+
 ## Version 3.4.2 *(2018-09-12)*
 #### Features
 * added Logger interface

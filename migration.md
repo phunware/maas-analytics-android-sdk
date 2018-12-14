@@ -1,5 +1,38 @@
 # Migration guide
 
+## 3.4.2 to 3.5.0
+
+### Library updates
+- compileSdkVersion - 28
+- targetSdkVersion - 28
+- Support Library version - 28.0.0
+- Google Play Services version - 16.0.0
+
+### New Analytics API
+#### General
+This release adds automatic screen view analytic events and simplifies the analytic custom event API. New addCustomEvent methods will appear in the new Maas Portal analytics dashboard. Existing deprecated addEvent methods will continue to appear in the old Maas Portal analytics dashboard.
+
+##### addCustomEvent(context, eventName)
+- add a named custom event.
+
+##### addCustomEvent(context, eventName, parameters)
+- add a named custom event with a dictionary of parameters.  These parameters will be merged with any global parameters, if set.
+
+##### enableAutomaticScreenViewEvents()
+- toggle automatic screen view events. An analytic event will occur for each Activity transition. Enabled by default.
+
+##### setCustomScreen(name)
+- Set a custom screen name to override the automatically generated screen view analytics. Use this to add analytics for fragment transitions.
+
+##### setAppSection(name)
+- Set a custom app section name
+
+##### setGlobalParameters(parameters)
+-Set a dictionary of values that will be added to all analytic events.
+
+#### Changes
+- Old analytics API has been deprecated.
+
 ## 3.4.1 to 3.4.2
 
 ### Changes
