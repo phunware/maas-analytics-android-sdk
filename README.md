@@ -25,7 +25,7 @@ public void onCreate() {
 
 Attribution
 -----------
-MaaS Mapping uses the following 3rd party components.
+MaaS Core uses the following 3rd party components.
 
 | Component     | Version  | Description   | License  |
 | ------------- | -------  |:-------------:| -----:|
