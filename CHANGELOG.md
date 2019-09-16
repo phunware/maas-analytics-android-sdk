@@ -1,4 +1,8 @@
 # Core Change Log
+## Version 3.5.1 *(2019-09-16)*
+#### Bug Fixes
+* Added unique names for modules to address issues with duplicate kotlin_module files
+
 ## Version 3.5.0 *(2018-12-14)*
 #### Features
 * New Analytics API - old methods deprecated see Migration.md for more info.
