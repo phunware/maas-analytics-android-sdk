@@ -1,6 +1,6 @@
 # Migration guide
 
-## 3.4.2 to 3.5.0
+## 3.4.2 to 3.5.1
 
 ### Library updates
 - compileSdkVersion - 28
