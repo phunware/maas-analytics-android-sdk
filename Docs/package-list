@@ -4,4 +4,5 @@ com.phunware.core.cme
 com.phunware.core.cme.models
 com.phunware.core.exceptions
 com.phunware.core.internal
+com.phunware.core.internal.screenview
 com.phunware.core.model

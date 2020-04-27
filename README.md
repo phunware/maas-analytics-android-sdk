@@ -3,7 +3,7 @@ MaaS Core
 
 [Android MaaS Core Documentation](http://phunware.github.io/maas-core-android-sdk/)
 
-**v3.5.1**
+**v3.5.2**
 ________________
 
 ## Overview
@@ -25,7 +25,7 @@ public void onCreate() {
 
 Attribution
 -----------
-MaaS Core uses the following 3rd party components.
+MaaS Mapping uses the following 3rd party components.
 
 | Component     | Version  | Description   | License  |
 | ------------- | -------  |:-------------:| -----:|

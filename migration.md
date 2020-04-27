@@ -1,5 +1,32 @@
 # Migration guide
 
+## 3.5.1 to 3.5.2
+
+#### New APIs for screen views
+
+This release adds support for tracking screen views from fragments.
+Old screen view APIs have been deprecated
+
+##### To track screenviews from both activities and fragments
+PwAnalyticsModule.registerScreenViews(activity)
+
+##### New APIs for tracking screen views in a custom manner
+PwAnalyticsModule.startScreenView(String screenName) PwAnalyticsModule.endScreenView(Context context, String screenClass, String screenName)
+
+##### New APIs for setting custom screen names
+PwAnalyticsModule.setCustomScreen(SCREEN_NAME, fragment)
+PwAnalyticsModule.setCustomScreen(SCREEN_NAME, activity)
+
+##### Deprecated API
+ (PwAnalyticsModule.setCustomScreen(SCREEN_NAME))
+
+##### New APIs for setting app section
+PwAnalyticsModule.setAppSection(APP_SECTION_NAME, fragment)
+PwAnalyticsModule.setAppSection(APP_SECTION_NAME, activity)
+
+##### Deprecated API
+PwAnalyticsModule.setAppSection(APP_SECTION_NAME)
+
 ## 3.4.2 to 3.5.1
 
 ### Library updates
