@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">PwCore Demo</string>
 
-    <string name="app_appid">575</string>
-    <string name="app_accesskey">b9747bef80f785db231a31a9f832ccb74caca3f0</string>
-    <string name="app_signaturekey">29091f076976f5ffde7243ea936dd7165aa41643</string>
+    <string name="app_appid"></string>
+    <string name="app_accesskey"></string>
+    <string name="app_signaturekey"></string>
 
     <string name="title_activity_second">SecondActivity</string>
 </resources>
