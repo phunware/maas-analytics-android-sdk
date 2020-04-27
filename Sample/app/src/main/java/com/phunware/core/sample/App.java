@@ -11,6 +11,5 @@ public class App extends Application {
         super.onCreate();
 
         PwLog.setShowLog(true);
-        this.registerActivityLifecycleCallbacks(new PwActivityLifecycleCallback());
     }
 }

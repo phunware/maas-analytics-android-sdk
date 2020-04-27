@@ -1,1 +1,11 @@
 /build
+.idea/*
+*.iml
+*.ipr
+*.iws
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
