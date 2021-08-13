@@ -69,11 +69,11 @@ The parameter map accepts a `String` as the key for the parameter and `Any` as t
 ##### Enabling automatic screen view tracking
 If you want the Analytics SDK to automatically track how much time your users spend on each screen, call:
 ```kotlin
-Analytics.enableAutomaticScreenViewEvents(true);
+Analytics.enableAutomaticScreenViewEvents(true)
 ```
 If you want to disable this feature, just call the same method with `false`:
 ```kotlin
-Analytics.enableAutomaticScreenViewEvents(false);
+Analytics.enableAutomaticScreenViewEvents(false)
 ```
 
 ##### Manually tracking screen view events
