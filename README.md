@@ -67,7 +67,7 @@ Analytics.sendEvent(eventName: String, parameters: Map<String, Any>)
 The parameter map accepts a `String` as the key for the parameter and `Any` as the value. You can pass any object as a parameter value, but you need to make sure it's `Serializable`.
 
 ##### Enabling automatic screen view tracking
-If you want the Analytics SDK to automatically track how long your users spent on each screen, call:
+If you want the Analytics SDK to automatically track how much time your users spend on each screen, call:
 ```kotlin
 Analytics.enableAutomaticScreenViewEvents(true);
 ```
@@ -77,25 +77,25 @@ Analytics.enableAutomaticScreenViewEvents(false);
 ```
 
 ##### Manually tracking screen view events
-If you want to manually track your screen view events, call the following method when the user start to see your screen:
+If you want to manually track your screen view events, call the following method when the user starts to see your screen:
 ```kotlin
 Analytics.startScreenView(className: String, screenName: String, appSection: String?, customParams: Map<String, String>?)
 ```
 
-And the following method when the user move away from that screen:
+And the following method when the user moves away from that screen:
 ```kotlin
 Analytics.endScreenView(screenName: String)
 ```
 ##### Enabling location and WiFi info tracking
 Some info cannot be tracked without first notifying the user about it, like tracking the SSID for the WiFi network or the user's location.
-If you'd like that information to be included in your analytic events, show a message explaining it to your user and only enable it after it has been acknowledged by your user.
+If you'd like that information to be included in your analytic events, show a message explaining to your user why you need that information and only enable tracking after it has been acknowledged by your user.
 
 To include user location data in your analytic events, call:
 ```kotlin
 AnalyticsSettings.setLocationAccessEnabled(enabled: Boolean)
 ```
 
-To include wifi data in your analytic events, call:
+To include WiFi data in your analytic events, call:
 ```kotlin
 AnalyticsSettings.setWifiInfoAccessEnabled(enabled: Boolean)
 ```
