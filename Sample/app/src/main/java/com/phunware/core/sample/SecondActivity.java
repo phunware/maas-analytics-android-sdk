@@ -2,8 +2,11 @@ package com.phunware.core.sample;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
+import androidx.core.app.NavUtils;
 import android.view.MenuItem;
+import com.phunware.analytics.sdk.Analytics;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SecondActivity extends Activity {
 
@@ -11,6 +14,7 @@ public class SecondActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        Analytics.sendEvent("SECOND_ACTIVITY_LOADED");
     }
 
     @Override
@@ -25,8 +29,12 @@ public class SecondActivity extends Activity {
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
                 NavUtils.navigateUpFromSameTask(this);
+                Map<String, String> eventParams = new HashMap<>();
+                eventParams.put("param1", "value1");
+                Analytics.sendEvent("NAVIGATED_HOME", eventParams);
                 return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

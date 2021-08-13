@@ -31,6 +31,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.phunware.core.sample.CoreDemo" />
         </activity>
+
+        <meta-data
+            android:name="com.phunware.maas.APPLICATION_ID"
+            android:value="2281" />
+
+        <meta-data
+            android:name="com.phunware.maas.ACCESS_KEY"
+            android:value="aae4dbe1efe8e0116ba26e5fadf7261d5621f088" />
+
     </application>
 
 </manifest>
