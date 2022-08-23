@@ -16,7 +16,8 @@
 
         <activity
             android:name="com.phunware.core.sample.CoreDemo"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,11 +35,11 @@
 
         <meta-data
             android:name="com.phunware.maas.APPLICATION_ID"
-            android:value="2281" />
+            android:value="" />
 
         <meta-data
             android:name="com.phunware.maas.ACCESS_KEY"
-            android:value="aae4dbe1efe8e0116ba26e5fadf7261d5621f088" />
+            android:value="" />
 
     </application>
 
