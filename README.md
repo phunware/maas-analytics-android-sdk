@@ -13,8 +13,8 @@ Add the following repository to your top level `build.gradle` file:
 ```groovy
 repositories {
     maven {
-            url "https://nexus.phunware.com/content/groups/public/"
-        }
+        url "https://nexus.phunware.com/content/groups/public/"
+    }
 }
 ```
 
@@ -44,7 +44,8 @@ For instructions on how to obtain an App ID and an Access key, please see the `M
 ##### Permissions
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
@@ -86,18 +87,13 @@ And the following method when the user moves away from that screen:
 ```kotlin
 Analytics.endScreenView(screenName: String)
 ```
-##### Enabling location and WiFi info tracking
-Some info cannot be tracked without first notifying the user about it, like tracking the SSID for the WiFi network or the user's location.
+##### Enabling location tracking
+Some info cannot be tracked without first notifying the user about it, like tracking the user's location.
 If you'd like that information to be included in your analytic events, show a message explaining to your user why you need that information and only enable tracking after it has been acknowledged by your user.
 
 To include user location data in your analytic events, call:
 ```kotlin
 AnalyticsSettings.setLocationAccessEnabled(enabled: Boolean)
-```
-
-To include WiFi data in your analytic events, call:
-```kotlin
-AnalyticsSettings.setWifiInfoAccessEnabled(enabled: Boolean)
 ```
 
 You're all set to send analytic events from your App!

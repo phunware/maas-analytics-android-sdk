@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.2.0][] - 2023-02-21
+
+### Changed
+
+- Bumped compileSdkVersion to API 33 (Android 13)
+- Bumped targetSdkVersion to API 33 (Android 13)
+- Updated Play Services Location to 20.0.0
+
+### Removed
+
+- Removed `BLUETOOTH` permission and related analytics
+- Removed `ACCESS_WIFI_STATE` permission and related analytics
+
 ## [4.1.1][] - 2022-10-20
 
 ### Changed
@@ -315,6 +328,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Various bug fixes
 
+[4.2.0]: https://github.com/phunware/maas-analytics-android-sdk/compare/4.1.1...4.2.0
 [4.1.1]: https://github.com/phunware/maas-analytics-android-sdk/compare/4.1.0...4.1.1
 [4.1.0]: https://github.com/phunware/maas-analytics-android-sdk/compare/4.0.1...4.1.0
 [4.0.1]: https://github.com/phunware/maas-analytics-android-sdk/compare/4.0.0...4.0.1

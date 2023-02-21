@@ -1,4 +1,4 @@
-package com.phunware.core.sample
+package com.phunware.analytics.sample
 
 import android.app.Activity
 import android.os.Bundle
